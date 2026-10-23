@@ -311,7 +311,7 @@ function QuickConnectDialog({ onQuickConnect }: { onQuickConnect: (url: string) 
 
 const STATS = [
   { value: "79%", label: "cheaper than our Devin bill" },
-  { value: "100+", label: "providers through LiteLLM" },
+  { value: "100+", label: "providers through DeepCloud LLM" },
   { value: "6", label: "agent harnesses" },
 ];
 
@@ -393,7 +393,9 @@ export default function MoyaiLanding({
           <span className="text-[clamp(18px,2vw,28px)] font-medium tracking-[-0.02em] text-white">
             Works with Claude Code and Codex
           </span>
-          <span className="text-[15px] text-[rgba(240,236,228,0.8)]">Self-hosted · 100+ providers through LiteLLM</span>
+          <span className="text-[15px] text-[rgba(240,236,228,0.8)]">
+            Self-hosted · 100+ providers through DeepCloud LLM
+          </span>
         </div>
       </section>
 
@@ -430,7 +432,7 @@ export default function MoyaiLanding({
           <LogoWall
             title="Any model, any provider"
             items={PROVIDERS}
-            footnote="Routed through your LiteLLM gateway, with spend tracked per teammate."
+            footnote="Routed through your DeepCloud LLM gateway, with spend tracked per teammate."
           />
         </div>
 

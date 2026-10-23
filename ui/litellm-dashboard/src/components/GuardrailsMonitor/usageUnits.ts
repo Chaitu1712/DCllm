@@ -74,7 +74,7 @@ export const pricingIssueUrl = (unpriced: UsageUnits, provider?: string): string
   const params = new URLSearchParams({
     template: "feature_request.yml",
     title: `[Feature]: add ${subject} pricing to the cost map`,
-    "the-feature": `LiteLLM has no price for these ${subject} usage units, so the Guardrails Monitor leaves them out of the cost: ${Object.keys(unpriced).join(", ")}`,
+    "the-feature": `DeepCloud LLM has no price for these ${subject} usage units, so the Guardrails Monitor leaves them out of the cost: ${Object.keys(unpriced).join(", ")}`,
   });
   return `https://github.com/BerriAI/litellm/issues/new?${params.toString()}`;
 };

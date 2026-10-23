@@ -14,7 +14,7 @@ export default function CyberArkEmptyPlaceholder({ onAdd }: CyberArkEmptyPlaceho
       </div>
       <h4 className="text-base font-semibold text-foreground">No CyberArk Configuration Found</h4>
       <p className="mx-auto mt-2 max-w-md text-sm text-muted-foreground">
-        Configure CyberArk Conjur to securely manage provider API keys and secrets for your LiteLLM deployment.
+        Configure CyberArk Conjur to securely manage provider API keys and secrets for your DeepCloud LLM deployment.
       </p>
       <Button size="lg" onClick={onAdd} className="mt-4">
         Configure CyberArk

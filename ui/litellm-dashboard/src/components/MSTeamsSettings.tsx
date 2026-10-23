@@ -88,7 +88,7 @@ const MSTeamsSettings: React.FC<MSTeamsSettingsProps> = ({ accessToken, userID, 
       <CardHeader>
         <CardTitle className="text-base">Microsoft Teams Alerting Settings</CardTitle>
         <p className="text-sm">
-          Send LiteLLM alerts to a Microsoft Teams channel via an incoming webhook. Create one from{" "}
+          Send DeepCloud LLM alerts to a Microsoft Teams channel via an incoming webhook. Create one from{" "}
           <a
             href="https://learn.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook"
             target="_blank"

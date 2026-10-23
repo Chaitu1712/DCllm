@@ -443,7 +443,7 @@ describe("CredentialModal with Anthropic workload identity federation", () => {
     const user = userEvent.setup();
     const onSubmit = renderModal({ initialProvider: "Anthropic", initialAuthMethod: "federation" });
     await screen.findByLabelText("Upstream API Base");
-    await chooseOption(user, /Identity Source/, "Token signed by LiteLLM (internal issuer)");
+    await chooseOption(user, /Identity Source/, "Token signed by DeepCloud LLM (internal issuer)");
     fill("Credential Name:", "anthropic-issuer");
     fill(/Federation Rule ID/, "fdrl_new");
     fill(/Organization ID/, "org-new");
@@ -598,7 +598,7 @@ describe("CredentialModal with GitHub Copilot auth types", () => {
   });
 });
 
-describe("CredentialModal public JWKS for a LiteLLM-signed Anthropic credential", () => {
+describe("CredentialModal public JWKS for a DeepCloud LLM-signed Anthropic credential", () => {
   const signedCredential: CredentialItem = {
     credential_name: "anthropic-signed",
     credential_values: {
@@ -681,13 +681,13 @@ describe("CredentialModal public JWKS for a LiteLLM-signed Anthropic credential"
     expect(screen.queryByRole("button", { name: "Copy JWKS" })).not.toBeInTheDocument();
   });
 
-  it("asks the admin to save first while the credential is not stored as LiteLLM-signed", async () => {
+  it("asks the admin to save first while the credential is not stored as DeepCloud LLM-signed", async () => {
     const user = userEvent.setup();
     renderModal({ mode: "edit", existingCredential: federatedCredential });
     await screen.findByLabelText("Upstream API Base");
     expect(screen.queryByText(/copy the public JWKS/)).not.toBeInTheDocument();
 
-    await chooseOption(user, /Identity Source/, "Token signed by LiteLLM (internal issuer)");
+    await chooseOption(user, /Identity Source/, "Token signed by DeepCloud LLM (internal issuer)");
 
     expect(await screen.findByText(/Once saved, reopen this credential/)).toBeInTheDocument();
     expect(screen.queryByLabelText("Public JWKS")).not.toBeInTheDocument();

@@ -25,7 +25,7 @@ const plural = (count: number, one: string, many: string): string => (count === 
 const ROUTE_LINKS: Readonly<Record<DecisionRoute, { readonly href: string; readonly label: string }>> = {
   decisions: { href: DECISIONS_DOCS_URL, label: "/v1/decisions docs" },
   "self-hosted": { href: DECISIONS_SELF_HOSTED_DOCS_URL, label: "Self-hosted, own route" },
-  "needs-upgrade": { href: DECISIONS_PROVIDERS_DOCS_URL, label: "Needs a newer LiteLLM" },
+  "needs-upgrade": { href: DECISIONS_PROVIDERS_DOCS_URL, label: "Needs a newer DeepCloud LLM" },
 };
 
 const DEPLOYMENT_NAMED_PROVIDERS: ReadonlySet<string> = new Set(["azure", "azure_ai"]);
@@ -118,7 +118,7 @@ const DecisionModelGarden: React.FC<DecisionModelGardenProps> = ({ accessToken, 
           <Sparkles className="size-4 text-muted-foreground" />
         </div>
         <div className="min-w-0 flex-1">
-          <h3 className="m-0 text-base font-semibold text-foreground">Decision models LiteLLM supports</h3>
+          <h3 className="m-0 text-base font-semibold text-foreground">Decision models DeepCloud LLM supports</h3>
           <p className="m-0 mt-0.5 text-sm text-muted-foreground">
             {routedRows.length} decision {plural(routedRows.length, "model", "models")} across {routedProviderCount}{" "}
             {plural(routedProviderCount, "provider", "providers")} {plural(routedRows.length, "answers", "answer")} on{" "}
@@ -126,7 +126,7 @@ const DecisionModelGarden: React.FC<DecisionModelGardenProps> = ({ accessToken, 
             {selfHostedCount > 0 &&
               ` ${selfHostedCount} more ${plural(selfHostedCount, "is self-hosted and answers on its own route", "are self-hosted and answer on their own routes")}.`}
             {needsUpgradeCount > 0 &&
-              ` ${needsUpgradeCount} more ${plural(needsUpgradeCount, "needs", "need")} a newer LiteLLM version.`}
+              ` ${needsUpgradeCount} more ${plural(needsUpgradeCount, "needs", "need")} a newer DeepCloud LLM version.`}
           </p>
         </div>
         <Button

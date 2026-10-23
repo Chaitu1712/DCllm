@@ -276,7 +276,7 @@ export default function ModelInfoView({
         parsedExtraParams = values.litellm_extra_params ? JSON.parse(values.litellm_extra_params) : {};
         delete parsedExtraParams.litellm_credential_name;
       } catch (e) {
-        toast.fromError("Invalid JSON in LiteLLM Params");
+        toast.fromError("Invalid JSON in DeepCloud LLM Params");
         setIsSaving(false);
         return;
       }
@@ -633,7 +633,7 @@ export default function ModelInfoView({
                 </div>
               </Card>
               <Card className="block p-6">
-                <p className="text-sm">LiteLLM Model</p>
+                <p className="text-sm">DeepCloud LLM Model</p>
                 <div className="mt-2 overflow-hidden">
                   <SimpleTooltip content={modelData.litellm_model_name || "Not Set"} className="w-full min-w-0">
                     <div className="break-all text-sm font-medium leading-relaxed cursor-pointer">
@@ -759,7 +759,7 @@ export default function ModelInfoView({
             value: modelData?.model_name || "Not Set",
           },
           {
-            label: "LiteLLM Model Name",
+            label: "DeepCloud LLM Model Name",
             value: modelData?.litellm_model_name || "Not Set",
           },
           {

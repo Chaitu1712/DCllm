@@ -191,7 +191,7 @@ describe("HomePage", () => {
 
   it("renders card_title, card_summary and the provider logo, falling back to the title and first sentence", async () => {
     blogPosts.posts = [
-      post("Gemini 4 Argon API Pricing and Day 0 Support on LiteLLM", "2026-10-13", [
+      post("Gemini 4 Argon API Pricing and Day 0 Support on DeepCloud LLM", "2026-10-13", [
         "gemini",
         "card_title:Gemini 4 Argon",
         "card_summary:Gemini 4 Argon costs $2.00 per 1M input tokens.",

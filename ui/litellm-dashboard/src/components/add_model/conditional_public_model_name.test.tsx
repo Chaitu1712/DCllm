@@ -44,7 +44,7 @@ describe("ConditionalPublicModelName", () => {
 
     expect(screen.getByText("Model Mappings")).toBeInTheDocument();
     expect(screen.getByText("Public Model Name")).toBeInTheDocument();
-    expect(screen.getByText("LiteLLM Model Name")).toBeInTheDocument();
+    expect(screen.getByText("DeepCloud LLM Model Name")).toBeInTheDocument();
   });
 
   it("settles after rewriting the custom placeholder mapping to the entered model name", () => {

@@ -505,12 +505,12 @@ function DetailPanel({
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center gap-1.5">
                 <KeyIcon className="h-3.5 w-3.5 text-info" />
-                <span className="text-xs font-semibold text-info">Forward LiteLLM API Key</span>
+                <span className="text-xs font-semibold text-info">Forward DeepCloud LLM API Key</span>
               </div>
               <Toggle enabled={g.forwardKey} onToggle={onToggleForwardKey} disabled={!isAdmin} />
             </div>
             <p className="text-xs text-info leading-relaxed">
-              When enabled, the caller&apos;s LiteLLM API key is forwarded as an{" "}
+              When enabled, the caller&apos;s DeepCloud LLM API key is forwarded as an{" "}
               <code className="font-mono bg-info/15 px-1 rounded-sm">Authorization</code> header to your guardrail
               endpoint. This allows your guardrail to authenticate model calls using the original caller&apos;s
               credentials.
@@ -711,7 +711,7 @@ function DetailPanel({
                 rel="noopener noreferrer"
                 className="text-info hover:underline"
               >
-                LiteLLM Generic Guardrail API docs
+                DeepCloud LLM Generic Guardrail API docs
               </a>{" "}
               for configuration details.
             </p>

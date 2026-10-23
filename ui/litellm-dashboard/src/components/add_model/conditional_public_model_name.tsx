@@ -40,17 +40,17 @@ const ANTHROPIC_1M_HEADERS = JSON.stringify({ extra_headers: { "anthropic-beta":
 
 const publicNameTooltipContent = (
   <div className="flex flex-col gap-2 text-left font-normal">
-    <div>The name you specify in your API calls to LiteLLM Proxy</div>
+    <div>The name you specify in your API calls to DeepCloud LLM Proxy</div>
     <div>
       <strong>Example:</strong> If you name your public model <code className={tooltipCodeClassName}>example-name</code>
-      , and choose <code className={tooltipCodeClassName}>openai/qwen-plus-latest</code> as the LiteLLM model
+      , and choose <code className={tooltipCodeClassName}>openai/qwen-plus-latest</code> as the DeepCloud LLM model
     </div>
     <div>
-      <strong>Usage:</strong> You make an API call to the LiteLLM proxy with{" "}
+      <strong>Usage:</strong> You make an API call to the DeepCloud LLM proxy with{" "}
       <code className={tooltipCodeClassName}>model = &quot;example-name&quot;</code>
     </div>
     <div>
-      <strong>Result:</strong> LiteLLM sends <code className={tooltipCodeClassName}>qwen-plus-latest</code> to the
+      <strong>Result:</strong> DeepCloud LLM sends <code className={tooltipCodeClassName}>qwen-plus-latest</code> to the
       provider
     </div>
   </div>
@@ -105,8 +105,8 @@ const columns: ColumnDef<ModelMapping>[] = [
     accessorKey: "litellm_model",
     header: () => (
       <span className="flex items-center">
-        LiteLLM Model Name
-        <SimpleTooltip content={<div>The model name LiteLLM will send to the LLM API</div>} width="360px" />
+        DeepCloud LLM Model Name
+        <SimpleTooltip content={<div>The model name DeepCloud LLM will send to the LLM API</div>} width="360px" />
       </span>
     ),
   },
@@ -206,7 +206,7 @@ const ConditionalPublicModelName: React.FC = () => {
       label={
         <span className="flex items-center">
           Model Mappings
-          <SimpleTooltip content="Map public model names to LiteLLM model names for load balancing" />
+          <SimpleTooltip content="Map public model names to DeepCloud LLM model names for load balancing" />
         </span>
       }
       required

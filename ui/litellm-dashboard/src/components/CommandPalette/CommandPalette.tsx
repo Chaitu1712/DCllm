@@ -298,7 +298,7 @@ function CommandPaletteDialog({ setOpen }: { setOpen: (open: boolean) => void })
         </div>
         <div className="flex h-10 items-center justify-between border-t border-border bg-muted/30 px-3 text-xs text-muted-foreground">
           <div className="flex items-center gap-2">
-            <span className="font-medium text-foreground">LiteLLM</span>
+            <span className="font-medium text-foreground">DeepCloud LLM</span>
             <span>{scope === "keys" ? "Virtual Keys" : "All pages"}</span>
           </div>
           <div className="flex items-center gap-3">

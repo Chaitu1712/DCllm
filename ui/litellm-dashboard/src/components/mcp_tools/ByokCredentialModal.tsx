@@ -107,7 +107,7 @@ export const ByokCredentialModal: React.FC<ByokCredentialModalProps> = ({ server
 
               <h2 className="text-2xl font-bold text-foreground mb-2">Connect {serverDisplayName}</h2>
               <p className="text-muted-foreground mb-6">
-                LiteLLM needs access to {serverDisplayName} to complete your request.
+                DeepCloud LLM needs access to {serverDisplayName} to complete your request.
               </p>
 
               {/* How it works */}
@@ -122,7 +122,7 @@ export const ByokCredentialModal: React.FC<ByokCredentialModalProps> = ({ server
                   <div>
                     <p className="font-semibold text-foreground mb-1">How it works</p>
                     <p className="text-muted-foreground text-sm">
-                      LiteLLM acts as a secure bridge. Your requests are routed through our MCP client directly to{" "}
+                      DeepCloud LLM acts as a secure bridge. Your requests are routed through our MCP client directly to{" "}
                       {serverDisplayName}&apos;s API.
                     </p>
                   </div>

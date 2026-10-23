@@ -99,6 +99,6 @@ export const SUGGESTIONS: Readonly<Partial<Record<EndpointType, readonly string[
 
 export const CODE_INTERPRETER_SUGGESTIONS: readonly string[] = [
   "Generate sample sales data CSV and create a chart",
-  "Create a PNG bar chart comparing AI gateway providers including LiteLLM",
+  "Create a PNG bar chart comparing AI gateway providers including DeepCloud LLM",
   "Generate a CSV of LLM pricing data and visualize it as a line chart",
 ];

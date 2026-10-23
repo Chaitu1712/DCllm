@@ -282,7 +282,7 @@ def generate_feedback_box():
     print("\033[1;37m" + "#" + " " * box_width + "#\033[0m")  # noqa: T201
     print("\033[1;37m" + "#" + "-" * box_width + "#\033[0m")  # noqa: T201
     print()  # noqa: T201
-    print(" Thank you for using dcllm!")  # noqa: T201
+    print(" Thank you for using DeepCloud LLM!")  # noqa: T201
     print()  # noqa: T201
     print()  # noqa: T201
     print()  # noqa: T201
@@ -1163,21 +1163,21 @@ ui_link: Final = f"{server_root_path}/ui"
 fallback_login_link: Final = f"{server_root_path}/fallback/login"
 model_hub_link: Final = f"{server_root_path}/ui/model_hub_table"
 ui_message: Final = (
-    f"[dcllm Admin Panel]({ui_link}). Create and edit keys with SSO. "
+    f"[DeepCloud LLM Admin Panel]({ui_link}). Create and edit keys with SSO. "
     f"Having issues? Try [Fallback Login]({fallback_login_link})."
-    f"\n\n[dcllm Model Hub]({model_hub_link}). See available models on the proxy."
+    f"\n\n[DeepCloud LLM Model Hub]({model_hub_link}). See available models on the proxy."
 )
 
-title: Final = os.getenv("DOCS_TITLE", "dcllm API") if premium_user else "dcllm API"
+title: Final = os.getenv("DOCS_TITLE", "DeepCloud LLM API") if premium_user else "DeepCloud LLM API"
 
 _title: Final = title
 _description: Final = (
     os.getenv(
         "DOCS_DESCRIPTION",
-        f"dcllm Proxy Server for calling 100+ LLMs through an OpenAI-compatible API.\n\n{ui_message}",
+        f"DeepCloud LLM Proxy Server for calling 100+ LLMs through an OpenAI-compatible API.\n\n{ui_message}",
     )
     if premium_user
-    else f"dcllm Proxy Server for calling 100+ LLMs through an OpenAI-compatible API.\n\n{ui_message}"
+    else f"DeepCloud LLM Proxy Server for calling 100+ LLMs through an OpenAI-compatible API.\n\n{ui_message}"
 )
 
 
@@ -1277,7 +1277,7 @@ async def _flush_request_accumulators(prisma: PrismaClient) -> None:
 
 async def proxy_shutdown_event(worker_heartbeat: ProxyWorkerHeartbeat | None = None) -> None:
     global prisma_client, master_key, user_custom_auth, user_custom_key_generate, user_custom_key_update
-    verbose_proxy_logger.info("Shutting down dcllm Proxy Server")
+    verbose_proxy_logger.info("Shutting down DeepCloud LLM Proxy Server")
     if worker_heartbeat is not None and prisma_client:
         await worker_heartbeat.deregister()
     if prisma_client:
@@ -6631,7 +6631,7 @@ class ProxyConfig:
                         )
                     )
                     if litellm.cache is not None:
-                        verbose_proxy_logger.debug("%sSet Cache on dcllm Proxy%s", blue_color_code, reset_color_code)
+                        verbose_proxy_logger.debug("%sSet Cache on DeepCloud LLM Proxy%s", blue_color_code, reset_color_code)
                 elif key == "cache" and value is False:
                     pass
                 elif key == "guardrails":
@@ -6651,7 +6651,7 @@ class ProxyConfig:
 
                     set_global_prompt_directory(value)
                     verbose_proxy_logger.info(
-                        "%sSet Global Prompt Directory on dcllm Proxy%s", blue_color_code, reset_color_code
+                        "%sSet Global Prompt Directory on DeepCloud LLM Proxy%s", blue_color_code, reset_color_code
                     )
                 elif key == "global_bitbucket_config":
                     from litellm.integrations.bitbucket import (
@@ -6660,14 +6660,14 @@ class ProxyConfig:
 
                     set_global_bitbucket_config(value)
                     verbose_proxy_logger.info(
-                        "%sSet Global BitBucket Config on dcllm Proxy%s", blue_color_code, reset_color_code
+                        "%sSet Global BitBucket Config on DeepCloud LLM Proxy%s", blue_color_code, reset_color_code
                     )
                 elif key == "global_gitlab_config":
                     from litellm.integrations.gitlab import set_global_gitlab_config
 
                     set_global_gitlab_config(value)
                     verbose_proxy_logger.info(
-                        "%sSet Global Gitlab Config on dcllm Proxy%s", blue_color_code, reset_color_code
+                        "%sSet Global Gitlab Config on DeepCloud LLM Proxy%s", blue_color_code, reset_color_code
                     )
                 elif key == "priority_reservation_settings":
                     from litellm.types.utils import PriorityReservationSettings

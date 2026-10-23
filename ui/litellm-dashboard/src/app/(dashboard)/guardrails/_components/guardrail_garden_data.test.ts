@@ -51,7 +51,7 @@ describe("guardrail_garden_data logos", () => {
     }
   });
 
-  it("uses the LiteLLM logo for every content filter card", () => {
+  it("uses the DeepCloud LLM logo for every content filter card", () => {
     for (const card of LITELLM_CONTENT_FILTER_CARDS) {
       expect(card.logo, `card ${card.id}`).toContain("litellm_monogram.svg");
     }

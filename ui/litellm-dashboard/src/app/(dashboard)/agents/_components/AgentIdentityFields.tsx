@@ -249,7 +249,7 @@ export const AgentIdentityFields = ({ accessToken }: { accessToken: string | nul
               )}
             </AgentFormField>
             <p className="text-sm text-muted-foreground">
-              LiteLLM verifies the agent&apos;s Entra token before matching this identity. Saving these fields
+              DeepCloud LLM verifies the agent&apos;s Entra token before matching this identity. Saving these fields
               configures the binding; an authenticated request provides verification. Runtime authentication headers are
               configured separately.
             </p>

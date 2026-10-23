@@ -13,8 +13,8 @@ import { Toaster } from "@/components/ui/sonner";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "LiteLLM Dashboard",
-  description: "LiteLLM Proxy Admin UI",
+  title: "DeepCloud LLM Dashboard",
+  description: "DeepCloud LLM Proxy Admin UI",
   icons: { icon: "/get_favicon" },
 };
 

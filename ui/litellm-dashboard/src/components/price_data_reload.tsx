@@ -442,7 +442,7 @@ const PriceDataReload: React.FC<PriceDataReloadProps> = ({
             <DialogHeader>
               <DialogTitle>Set Up Periodic Reload</DialogTitle>
               <DialogDescription>
-                Set how often LiteLLM should fetch the latest pricing data from the remote source.
+                Set how often DeepCloud LLM should fetch the latest pricing data from the remote source.
               </DialogDescription>
             </DialogHeader>
             <div className="space-y-4">

@@ -145,7 +145,7 @@ const VECTOR_STORE_ID_PLACEHOLDERS: Record<string, string> = {
   mongodb: "my-vector-index (MongoDB Vector Search index name)",
 };
 
-const VERTEX_SEARCH_API_WITH_ENGINE_PLACEHOLDER = "Any identifier you'll use to reference this in LiteLLM";
+const VERTEX_SEARCH_API_WITH_ENGINE_PLACEHOLDER = "Any identifier you'll use to reference this in DeepCloud LLM";
 
 const DEFAULT_VECTOR_STORE_ID_PLACEHOLDER = "Enter vector store ID from your provider";
 
@@ -325,7 +325,7 @@ const VectorStoreForm: React.FC<VectorStoreFormProps> = ({
                   <Info />
                   <AlertTitle>PG Vector Setup Required</AlertTitle>
                   <AlertDescription>
-                    <p>LiteLLM provides a server to connect to PG Vector. To use this provider:</p>
+                    <p>DeepCloud LLM provides a server to connect to PG Vector. To use this provider:</p>
                     <ol style={{ marginLeft: "16px", marginTop: "8px", listStyleType: "decimal" }}>
                       <li>
                         Deploy the litellm-pgvector server from:{" "}
@@ -347,8 +347,8 @@ const VectorStoreForm: React.FC<VectorStoreFormProps> = ({
                   <AlertTitle>Valkey Setup Required</AlertTitle>
                   <AlertDescription>
                     <p>
-                      LiteLLM searches documents you have already stored in Valkey. It does not create the index or
-                      upload documents for you. Before creating this vector store, make sure:
+                      DeepCloud LLM searches documents you have already stored in Valkey. It does not create the index
+                      or upload documents for you. Before creating this vector store, make sure:
                     </p>
                     <ol style={{ marginLeft: "16px", marginTop: "8px", listStyleType: "decimal" }}>
                       <li>
@@ -369,8 +369,8 @@ const VectorStoreForm: React.FC<VectorStoreFormProps> = ({
                       </li>
                     </ol>
                     <p style={{ marginTop: "8px" }}>
-                      When a query comes in, LiteLLM converts it to an embedding with the model below and returns the
-                      closest matching documents from your index.
+                      When a query comes in, DeepCloud LLM converts it to an embedding with the model below and returns
+                      the closest matching documents from your index.
                     </p>
                   </AlertDescription>
                 </Alert>
@@ -439,8 +439,8 @@ const VectorStoreForm: React.FC<VectorStoreFormProps> = ({
                       <li>
                         For website, healthcare, and connector-based sources (Drive, Gmail, Slack, Jira, etc.): create a
                         search app on top of the data store, then copy the <strong>Engine ID</strong> and enter it in
-                        the Engine ID field. The Vector Store ID is still required as the LiteLLM-side name for this
-                        record, but it isn&apos;t used in the GCP URL when Engine ID is set.
+                        the Engine ID field. The Vector Store ID is still required as the DeepCloud LLM-side name for
+                        this record, but it isn&apos;t used in the GCP URL when Engine ID is set.
                       </li>
                     </ol>
                   </AlertDescription>
@@ -466,7 +466,7 @@ const VectorStoreForm: React.FC<VectorStoreFormProps> = ({
                 name="vector_store_name"
                 label={labelWithHint(
                   "Vector Store Name",
-                  "Custom name you want to give to the vector store, this name will be rendered on the LiteLLM UI",
+                  "Custom name you want to give to the vector store, this name will be rendered on the DeepCloud LLM UI",
                 )}
               >
                 {({ ref, value, ...field }) => <Input {...field} ref={ref} value={value ?? ""} />}

@@ -65,7 +65,7 @@ const AgentKillSwitchDangerZone: React.FC<AgentKillSwitchDangerZoneProps> = ({
               <>
                 <p className="text-muted-foreground">
                   Calls the configured webhook to stop this agent&apos;s upstream runtime. This can cause an outage for
-                  everyone using the agent and cannot be undone from LiteLLM
+                  everyone using the agent and cannot be undone from DeepCloud LLM
                 </p>
                 <p className="font-mono break-all text-foreground">
                   {killSwitch.method ?? "POST"} {killSwitch.url}
@@ -102,8 +102,8 @@ const AgentKillSwitchDangerZone: React.FC<AgentKillSwitchDangerZoneProps> = ({
               <CircleAlert />
               <AlertTitle>This can cause an outage</AlertTitle>
               <AlertDescription>
-                LiteLLM will call {killSwitch?.method ?? "POST"} {killSwitch?.url} immediately. Whatever that webhook
-                does to the agent is outside LiteLLM&apos;s control and cannot be reverted here
+                DeepCloud LLM will call {killSwitch?.method ?? "POST"} {killSwitch?.url} immediately. Whatever that
+                webhook does to the agent is outside DeepCloud LLM&apos;s control and cannot be reverted here
               </AlertDescription>
             </Alert>
             <div>

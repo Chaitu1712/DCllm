@@ -130,10 +130,10 @@ describe("guardrail_info_helpers", () => {
   });
 
   describe("shouldRenderContentFilterConfigSettings", () => {
-    it("should return true when dynamic providers include LiteLLM Content Filter", () => {
+    it("should return true when dynamic providers include DeepCloud LLM Content Filter", () => {
       populateGuardrailProviders({
         litellm_content_filter: {
-          ui_friendly_name: "LiteLLM Content Filter",
+          ui_friendly_name: "DeepCloud LLM Content Filter",
         },
       });
 

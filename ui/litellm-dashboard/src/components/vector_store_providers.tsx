@@ -8,7 +8,7 @@ import valkeyLogo from "../../public/assets/logos/valkey.svg";
 export enum VectorStoreProviders {
   Bedrock = "Amazon Bedrock",
   S3Vectors = "Amazon S3 Vectors",
-  PgVector = "PostgreSQL pgvector (LiteLLM Connector)",
+  PgVector = "PostgreSQL pgvector (DeepCloud LLM Connector)",
   VertexRagEngine = "Vertex AI RAG Engine",
   VertexAiSearch = "Vertex AI Search",
   OpenAI = "OpenAI",
@@ -210,7 +210,7 @@ export const vectorStoreProviderFields: Record<string, VectorStoreFieldConfig[]>
       name: "embedding_model",
       label: "Embedding Model",
       tooltip:
-        "The embedding model on this proxy that created the vectors already stored in your collection. LiteLLM embeds every search query with it, so it must be the same model. A different model of the same size will not error, it will just return wrong results. Add it under Models first if it is not listed",
+        "The embedding model on this proxy that created the vectors already stored in your collection. DeepCloud LLM embeds every search query with it, so it must be the same model. A different model of the same size will not error, it will just return wrong results. Add it under Models first if it is not listed",
       placeholder: "text-embedding-3-small",
       required: true,
       type: "select",
@@ -229,7 +229,7 @@ export const vectorStoreProviderFields: Record<string, VectorStoreFieldConfig[]>
       name: "mongodb_text_field",
       label: "Text Field",
       tooltip:
-        "The field in each document that holds its readable text. LiteLLM returns this text in search results, and it accepts a dotted path such as metadata.body (default: text)",
+        "The field in each document that holds its readable text. DeepCloud LLM returns this text in search results, and it accepts a dotted path such as metadata.body (default: text)",
       placeholder: "text",
       required: false,
       type: "text",
@@ -239,7 +239,7 @@ export const vectorStoreProviderFields: Record<string, VectorStoreFieldConfig[]>
       name: "mongodb_num_candidates",
       label: "Candidates Considered",
       tooltip:
-        "How many nearest neighbours MongoDB examines before returning the top results. Higher is more accurate and slower. Leave blank to let LiteLLM scale it with the requested result count",
+        "How many nearest neighbours MongoDB examines before returning the top results. Higher is more accurate and slower. Leave blank to let DeepCloud LLM scale it with the requested result count",
       placeholder: "100",
       required: false,
       type: "text",
@@ -287,7 +287,7 @@ export const vectorStoreProviderFields: Record<string, VectorStoreFieldConfig[]>
       name: "embedding_model",
       label: "Embedding Model",
       tooltip:
-        "The embedding model on this proxy that was used to create the embeddings already stored in your Valkey index. LiteLLM uses it to embed each search query, so it must be the same model or results will be wrong. Add it under Models first if it is not listed",
+        "The embedding model on this proxy that was used to create the embeddings already stored in your Valkey index. DeepCloud LLM uses it to embed each search query, so it must be the same model or results will be wrong. Add it under Models first if it is not listed",
       placeholder: "text-embedding-3-small",
       required: true,
       type: "select",
@@ -296,7 +296,7 @@ export const vectorStoreProviderFields: Record<string, VectorStoreFieldConfig[]>
       name: "valkey_text_field",
       label: "Text Field",
       tooltip:
-        "The field in each stored document that holds its readable text. LiteLLM returns this text in search results. Must match how your documents were stored (default: text)",
+        "The field in each stored document that holds its readable text. DeepCloud LLM returns this text in search results. Must match how your documents were stored (default: text)",
       placeholder: "text",
       required: false,
       type: "text",
@@ -306,7 +306,7 @@ export const vectorStoreProviderFields: Record<string, VectorStoreFieldConfig[]>
       name: "valkey_embedding_field",
       label: "Vector Field Name",
       tooltip:
-        "The field in each stored document that holds its embedding. LiteLLM searches against this field, so it must match the field your index was created on (default: embedding)",
+        "The field in each stored document that holds its embedding. DeepCloud LLM searches against this field, so it must match the field your index was created on (default: embedding)",
       placeholder: "embedding",
       required: false,
       type: "text",

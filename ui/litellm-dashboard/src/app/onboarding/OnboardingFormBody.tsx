@@ -38,7 +38,7 @@ export function OnboardingFormBody({ variant, userEmail, isPending, claimError, 
     <div className="mx-auto w-full max-w-md mt-10">
       <Card>
         <CardContent>
-          <h5 className="text-center mb-5 text-base font-semibold text-foreground">🚅 LiteLLM</h5>
+          <h5 className="text-center mb-5 text-base font-semibold text-foreground">DeepCloud LLM</h5>
           <h3 className="text-2xl font-semibold text-foreground">{actionLabel}</h3>
           <p className="text-sm text-foreground">
             {isResetPassword

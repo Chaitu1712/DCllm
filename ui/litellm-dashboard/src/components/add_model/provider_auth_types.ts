@@ -31,7 +31,7 @@ export const PROVIDER_AUTH_TYPES: Partial<Record<keyof typeof Providers, readonl
       label: "Per-user GitHub OAuth",
       credentialOnly: true,
       description:
-        "Each LiteLLM user connects their own GitHub account from LLM Credentials, and their requests use their own GitHub Copilot access. Users who have not connected get a 401.",
+        "Each DeepCloud LLM user connects their own GitHub account from LLM Credentials, and their requests use their own GitHub Copilot access. Users who have not connected get a 401.",
       fieldKeys: [GITHUB_COPILOT_AUTH_TYPE_KEY, GITHUB_COPILOT_HOST_KEY],
       requiredFieldKeys: [GITHUB_COPILOT_AUTH_TYPE_KEY],
       fixedValues: { [GITHUB_COPILOT_AUTH_TYPE_KEY]: GITHUB_COPILOT_PER_USER_AUTH_TYPE },
@@ -43,7 +43,7 @@ export const PROVIDER_AUTH_TYPES: Partial<Record<keyof typeof Providers, readonl
       label: "OAuth token exchange (on-behalf-of)",
       credentialOnly: true,
       description:
-        "LiteLLM exchanges each caller's IdP-issued JWT at your IdP's token endpoint for a delegated token. Microsoft Graph only accepts Microsoft Entra tokens, so for Microsoft 365 Copilot the token endpoint must be Entra and callers must send an Entra-issued JWT for this app. Users can still sign in through any IdP federated with Entra.",
+        "DeepCloud LLM exchanges each caller's IdP-issued JWT at your IdP's token endpoint for a delegated token. Microsoft Graph only accepts Microsoft Entra tokens, so for Microsoft 365 Copilot the token endpoint must be Entra and callers must send an Entra-issued JWT for this app. Users can still sign in through any IdP federated with Entra.",
       fieldKeys: [
         "token_exchange_endpoint",
         "token_exchange_profile",

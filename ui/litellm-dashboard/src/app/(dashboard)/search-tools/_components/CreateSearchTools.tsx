@@ -273,7 +273,7 @@ const CreateSearchTool: React.FC<CreateSearchToolProps> = ({
                   name="input_cost_per_query"
                   label={labelWithHint(
                     "Cost per Query (USD, Optional)",
-                    "Your negotiated price per search query. It overrides the LiteLLM cost map price for this tool in the response cost header and spend logs. Leave blank to use the provider's default price.",
+                    "Your negotiated price per search query. It overrides the DeepCloud LLM cost map price for this tool in the response cost header and spend logs. Leave blank to use the provider's default price.",
                   )}
                 >
                   {({ ref, value, onChange, ...field }) => (

@@ -345,7 +345,7 @@ const ProviderSpecificFieldsContent: React.FC<ProviderSpecificFieldsProps> = ({
       {availableAuthTypes.length > 0 && selectedAuthType && (
         <div className="mb-4 flex flex-col gap-2">
           <label htmlFor={authTypeSelectId} className="text-sm font-medium">
-            {labelWithHint("Auth Type:", "Select how LiteLLM authenticates to this provider.")}
+            {labelWithHint("Auth Type:", "Select how DeepCloud LLM authenticates to this provider.")}
           </label>
           <Select
             items={availableAuthTypes.map(({ id, label }) => ({ value: id, label }))}

@@ -31,7 +31,7 @@ interface Announcement {
 
 const AUTO_ROUTER_ANNOUNCEMENT: Announcement = {
   readKey: "litellmHideAutoRouterAnnouncement",
-  title: "LiteLLM Auto Router",
+  title: "DeepCloud LLM Auto Router",
   description: "Route every request to the cheapest model that can handle it, no prompt changes needed.",
   linkLabel: "Read the docs",
   href: AUTO_ROUTER_DOCS_URL,
@@ -56,7 +56,7 @@ const upgradeAnnouncement = (
   }
   return {
     readKey: `litellm:upgradeBannerDismissed:${latestRelease.version}`,
-    title: `LiteLLM v${latestRelease.version} is available`,
+    title: `DeepCloud LLM v${latestRelease.version} is available`,
     description: `${describeRelease(latestRelease)}. Your current version is v${currentVersion}`,
     linkLabel: "View release notes",
     href: latestRelease.release_url,

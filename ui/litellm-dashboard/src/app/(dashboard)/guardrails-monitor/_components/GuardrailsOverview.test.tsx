@@ -24,7 +24,7 @@ const baseRow: GuardrailUsageOverviewRow = {
   id: "guardrail",
   name: "Guardrail",
   type: "content_filter",
-  provider: "LiteLLM",
+  provider: "DeepCloud LLM",
   requestsEvaluated: 0,
   failRate: 0,
   avgScore: null,

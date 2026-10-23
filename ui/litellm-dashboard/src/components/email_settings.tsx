@@ -99,7 +99,7 @@ const EmailSettings: React.FC<EmailSettingsProps> = ({ accessToken, premiumUser,
               rel="noreferrer"
               className="text-primary underline underline-offset-4"
             >
-              LiteLLM Docs: email alerts
+              DeepCloud LLM Docs: email alerts
             </a>
           </p>
         </CardHeader>

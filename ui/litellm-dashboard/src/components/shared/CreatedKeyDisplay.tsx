@@ -14,11 +14,11 @@ interface CreatedKeyDisplayProps {
 export const buildAgentInstructions = (baseUrl: string, apiKey: string): string => {
   const normalizedBaseUrl = baseUrl.replace(/\/+$/, "");
   const endpointIntroduction =
-    "LiteLLM is a gateway that exposes OpenAI and Anthropic compatible APIs. " +
+    "DeepCloud LLM is a gateway that exposes OpenAI and Anthropic compatible APIs. " +
     `Send the virtual key as a Bearer token (Authorization: Bearer ${apiKey}) to:`;
 
   return [
-    "Use this LiteLLM AI gateway for model inference.",
+    "Use this DeepCloud LLM AI gateway for model inference.",
     "",
     `Gateway URL: ${normalizedBaseUrl}`,
     `Virtual key: ${apiKey}`,
@@ -32,7 +32,7 @@ export const buildAgentInstructions = (baseUrl: string, apiKey: string): string 
     `To run Claude Code through this gateway, set ANTHROPIC_BASE_URL=${normalizedBaseUrl} and ANTHROPIC_AUTH_TOKEN=${apiKey}.`,
     `To run Codex through this gateway, set OPENAI_BASE_URL=${normalizedBaseUrl}/v1 and OPENAI_API_KEY=${apiKey}.`,
     "",
-    "Docs for everything else LiteLLM supports: https://docs.litellm.ai/docs/",
+    "Docs for everything else DeepCloud LLM supports: https://docs.litellm.ai/docs/",
   ].join("\n");
 };
 
@@ -63,8 +63,8 @@ const CreatedKeyDisplay: React.FC<CreatedKeyDisplayProps> = ({ apiKey }) => {
     <div>
       <p className="mb-2">
         Please save this secret key somewhere safe and accessible. For security reasons,{" "}
-        <b>you will not be able to view it again</b> through your LiteLLM account. If you lose this secret key, you will
-        need to generate a new one.
+        <b>you will not be able to view it again</b> through your DeepCloud LLM account. If you lose this secret key,
+        you will need to generate a new one.
       </p>
 
       <p className="text-sm text-muted-foreground mt-3 mb-1">Virtual Key:</p>

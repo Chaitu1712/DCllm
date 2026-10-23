@@ -23,7 +23,7 @@ def render_native_client_consent_page(
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
-<title>Authorize CLI access - LiteLLM</title>
+<title>Authorize CLI access - DeepCloud LLM</title>
 <style>
 body {{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -58,7 +58,7 @@ button {{ flex: 1; padding: 10px; border-radius: 6px; font-size: 15px; cursor: p
 <body>
 <div class="container">
 <h1>Authorize CLI access</h1>
-<p>A command-line client at <code>{escape(client_origin)}</code> wants to call LiteLLM as <strong>{escape(user_id)}</strong>.</p>
+<p>A command-line client at <code>{escape(client_origin)}</code> wants to call DeepCloud LLM as <strong>{escape(user_id)}</strong>.</p>
 <p>Approving issues it a personal credential that expires within {CLI_JWT_EXPIRATION_HOURS} hours. <code>lite logout</code> stops it from being renewed. Only approve if you started this sign-in yourself.</p>
 <form method="post" action="{escape(complete_url)}">
 <input type="hidden" name="flow" value="{escape(flow_handle)}">

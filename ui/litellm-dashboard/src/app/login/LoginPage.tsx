@@ -48,8 +48,8 @@ function SsoEnabledNotice() {
     <Alert variant="info" className="mt-4">
       <Info />
       <AlertTitle>
-        Single Sign-On (SSO) is enabled. LiteLLM no longer automatically redirects to the SSO login flow upon loading
-        this page. To re-enable auto-redirect-to-SSO, set{" "}
+        Single Sign-On (SSO) is enabled. DeepCloud LLM no longer automatically redirects to the SSO login flow upon
+        loading this page. To re-enable auto-redirect-to-SSO, set{" "}
         <code className="bg-muted px-1 py-0.5 rounded-sm text-xs">AUTO_REDIRECT_UI_LOGIN_TO_SSO=true</code> in your
         environment configuration.
       </AlertTitle>
@@ -198,7 +198,7 @@ function LoginPageContent() {
           <CardContent>
             <div className="flex w-full flex-col gap-4">
               <div className="text-center">
-                <h2 className="text-3xl font-semibold text-foreground">🚅 LiteLLM</h2>
+                <h2 className="text-3xl font-semibold text-foreground">DeepCloud LLM</h2>
               </div>
 
               <Alert variant="warning">
@@ -228,12 +228,12 @@ function LoginPageContent() {
           <TooltipProvider>
             <div className="flex w-full flex-col gap-4">
               <div className="text-center">
-                <h2 className="text-3xl font-semibold text-foreground">🚅 LiteLLM</h2>
+                <h2 className="text-3xl font-semibold text-foreground">DeepCloud LLM</h2>
               </div>
 
               <div className="text-center">
                 <h3 className="text-2xl font-semibold text-foreground">Login</h3>
-                <p className="text-sm text-muted-foreground">Access your LiteLLM Admin UI.</p>
+                <p className="text-sm text-muted-foreground">Access your DeepCloud LLM Admin UI.</p>
               </div>
 
               {!uiConfig?.hide_default_credentials_hint && (
@@ -243,7 +243,7 @@ function LoginPageContent() {
                   <AlertDescription>
                     <p className="text-sm">
                       By default, Username is <code className="bg-muted px-1 py-0.5 rounded-sm text-xs">admin</code> and
-                      Password is your set LiteLLM Proxy
+                      Password is your set DeepCloud LLM Proxy
                       <code className="bg-muted px-1 py-0.5 rounded-sm text-xs">MASTER_KEY</code>.
                     </p>
                     <p className="mt-2 text-sm">

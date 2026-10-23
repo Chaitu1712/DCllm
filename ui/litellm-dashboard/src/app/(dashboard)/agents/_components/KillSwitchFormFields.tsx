@@ -140,7 +140,7 @@ const KillSwitchFormFields = () => (
       name="kill_switch.url"
       label={labelWithHint(
         "Webhook URL",
-        "Absolute http(s) URL LiteLLM calls when the kill switch is triggered. Leave empty to remove the kill switch.",
+        "Absolute http(s) URL DeepCloud LLM calls when the kill switch is triggered. Leave empty to remove the kill switch.",
       )}
       placeholder="https://example.com/hooks/kill-agent"
     />

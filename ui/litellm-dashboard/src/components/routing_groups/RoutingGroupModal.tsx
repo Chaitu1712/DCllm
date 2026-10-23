@@ -134,7 +134,7 @@ const RoutingGroupModal: React.FC<RoutingGroupModalProps> = ({
               control={form.control}
               name="group_name"
               label="Group Name"
-              description="Use this name as the model in API calls. LiteLLM routes the request to one of the group's models."
+              description="Use this name as the model in API calls. DeepCloud LLM routes the request to one of the group's models."
             >
               {({ ref, ...field }) => <Input {...field} ref={ref} placeholder="fast-chat" disabled={mode === "edit"} />}
             </FormField>

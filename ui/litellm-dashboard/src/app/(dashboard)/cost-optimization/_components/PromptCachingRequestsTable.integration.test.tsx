@@ -232,7 +232,7 @@ describe("PromptCachingRequestsTable", () => {
     fireEvent.click(screen.getByRole("button", { name: "Go to next page" }));
     await screen.findByRole("link", { name: "all-2" });
 
-    fireEvent.click(screen.getByRole("tab", { name: "LiteLLM injected" }));
+    fireEvent.click(screen.getByRole("tab", { name: "DeepCloud LLM injected" }));
     await screen.findByRole("link", { name: "injected-1" });
     expect(screen.queryByRole("link", { name: "all-2" })).not.toBeInTheDocument();
     expect(lastQuery().get("filter")).toBe("injected");

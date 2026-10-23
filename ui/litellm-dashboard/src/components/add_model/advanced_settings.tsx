@@ -462,7 +462,7 @@ const AdvancedSettings: React.FC<AdvancedSettingsProps> = ({
               label={labelWithHint(
                 "Kubernetes pod discovery",
                 "Treat the API Base hostname as a Kubernetes headless service: resolve it to its ready pod IPs " +
-                  "and spread requests across the pods. LiteLLM must run inside the same cluster.",
+                  "and spread requests across the pods. DeepCloud LLM must run inside the same cluster.",
               )}
               className="mb-4"
             >
@@ -501,7 +501,7 @@ const AdvancedSettings: React.FC<AdvancedSettingsProps> = ({
             <MountedFormField
               name="litellm_extra_params"
               label={labelWithHint(
-                "LiteLLM Params",
+                "DeepCloud LLM Params",
                 "Optional litellm params used for making a litellm.completion() call.",
               )}
               className="mb-4 mt-4"
@@ -524,7 +524,7 @@ const AdvancedSettings: React.FC<AdvancedSettingsProps> = ({
             </MountedFormField>
             <div className="grid grid-cols-24 mb-4">
               <p className="col-start-11 col-span-10 text-muted-foreground text-sm">
-                Pass JSON of litellm supported params{" "}
+                Pass JSON of DeepCloud LLM supported params{" "}
                 <a
                   href="https://docs.litellm.ai/docs/completion/input"
                   target="_blank"

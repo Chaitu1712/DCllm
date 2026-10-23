@@ -406,11 +406,13 @@ describe("MCPServerEdit (true passthrough warning)", () => {
       />,
     );
 
-  it("warns that LiteLLM auth is disabled for a true_passthrough server", async () => {
+  it("warns that DeepCloud LLM auth is disabled for a true_passthrough server", async () => {
     renderWithAuthType("true_passthrough");
 
     await waitFor(() => {
-      expect(screen.getByText("True Passthrough disables LiteLLM authentication for this server")).toBeInTheDocument();
+      expect(
+        screen.getByText("True Passthrough disables DeepCloud LLM authentication for this server"),
+      ).toBeInTheDocument();
     });
   });
 
@@ -421,7 +423,7 @@ describe("MCPServerEdit (true passthrough warning)", () => {
       expect(screen.getAllByRole("button", { name: "Save Changes" }).length).toBeGreaterThan(0);
     });
     expect(
-      screen.queryByText("True Passthrough disables LiteLLM authentication for this server"),
+      screen.queryByText("True Passthrough disables DeepCloud LLM authentication for this server"),
     ).not.toBeInTheDocument();
   });
 
@@ -439,7 +441,7 @@ describe("MCPServerEdit (true passthrough warning)", () => {
       />,
     );
 
-    await selectOption("Authentication", "True Passthrough (no LiteLLM auth)");
+    await selectOption("Authentication", "True Passthrough (no DeepCloud LLM auth)");
 
     await waitFor(() => {
       expect(mockOauth.getTemporaryPayload).toBeTruthy();
@@ -1921,7 +1923,7 @@ describe("MCPServerEdit (OAuth token persistence on save)", () => {
 
     await selectOption("Authentication", "OAuth Delegate (client-supplied upstream token)");
     mockOauth.tokenResponse = { access_token: "fresh-tok", token_type: "bearer" };
-    await selectOption("Authentication", "True Passthrough (no LiteLLM auth)");
+    await selectOption("Authentication", "True Passthrough (no DeepCloud LLM auth)");
 
     await waitFor(() => {
       const withHeaders = vi

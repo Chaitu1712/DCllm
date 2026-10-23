@@ -194,7 +194,9 @@ export const getPassThroughEndpointsTableColumns = ({
     id: "auth",
     accessorKey: "auth",
     meta: { title: "Authentication", skeleton: "badge" },
-    header: () => <HeaderWithTooltip title="Authentication" tooltip="LiteLLM Virtual Key required to call endpoint" />,
+    header: () => (
+      <HeaderWithTooltip title="Authentication" tooltip="DeepCloud LLM Virtual Key required to call endpoint" />
+    ),
     size: 140,
     enableSorting: false,
     cell: ({ row }) => (

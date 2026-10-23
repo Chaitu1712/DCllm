@@ -40,7 +40,7 @@ def build_ui_login_form(
                 </svg>
                 Default Credentials
             </div>
-            <p>By default, Username is <code>admin</code> and Password is your set LiteLLM Proxy <code>MASTER_KEY</code>.</p>
+            <p>By default, Username is <code>admin</code> and Password is your set DeepCloud LLM Proxy <code>MASTER_KEY</code>.</p>
             <p>Need to set UI credentials or SSO? <a href="https://docs.litellm.ai/docs/proxy/ui" target="_blank">Check the documentation</a>.</p>
         </div>
         """
@@ -51,7 +51,7 @@ def build_ui_login_form(
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>LiteLLM Login</title>
+    <title>DeepCloud LLM Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {{
@@ -250,11 +250,11 @@ def build_ui_login_form(
         {banner_html}
         <div class="logo-container">
             <div class="logo">
-                🚅 LiteLLM
+                DeepCloud LLM
             </div>
         </div>
         <h2>Login</h2>
-        <p class="subtitle">Access your LiteLLM Admin UI.</p>
+        <p class="subtitle">Access your DeepCloud LLM Admin UI.</p>
         {info_box_html}
         <label for="username">Username<span class="required">*</span></label>
         <input type="text" id="username" name="username" required placeholder="Enter your username" autocomplete="username">

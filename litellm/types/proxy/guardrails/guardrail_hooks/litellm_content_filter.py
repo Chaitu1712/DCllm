@@ -169,4 +169,4 @@ class LitellmContentFilterGuardrailConfigModel(GuardrailConfigModel):
 
     @staticmethod
     def ui_friendly_name() -> str:
-        return "LiteLLM Content Filter"
+        return "DeepCloud LLM Content Filter"

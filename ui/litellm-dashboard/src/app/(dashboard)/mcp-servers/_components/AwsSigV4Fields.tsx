@@ -119,7 +119,7 @@ const AwsSigV4Fields: React.FC = () => (
       label={
         <FieldLabel
           label="AWS Role ARN"
-          tooltip="Optional. IAM role ARN to assume via STS before signing. If set, LiteLLM calls sts:AssumeRole to get temporary credentials. Uses ambient credentials (IAM role, env vars) as the source identity unless explicit keys are also provided."
+          tooltip="Optional. IAM role ARN to assume via STS before signing. If set, DeepCloud LLM calls sts:AssumeRole to get temporary credentials. Uses ambient credentials (IAM role, env vars) as the source identity unless explicit keys are also provided."
         />
       }
       name={["credentials", "aws_role_name"]}

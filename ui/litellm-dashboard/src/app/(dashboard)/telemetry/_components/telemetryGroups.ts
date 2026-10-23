@@ -21,12 +21,12 @@ export const UI_GROUPS: readonly TelemetryGroup[] = ["page_navigation"];
 export const GROUP_COPY: Readonly<Record<TelemetryGroup, GroupCopy>> = {
   heartbeat: {
     title: "Heartbeat",
-    counts: "Random instance id, LiteLLM version, report window, which groups are on",
+    counts: "Random instance id, DeepCloud LLM version, report window, which groups are on",
     helps: "Which versions are running",
   },
   request_success: {
     title: "Request success",
-    slices: "endpoint, LiteLLM status, provider status, stream, handled by Rust, LiteLLM cache hit",
+    slices: "endpoint, DeepCloud LLM status, provider status, stream, handled by Rust, DeepCloud LLM cache hit",
     counts: "requests, provider attempts, latency to headers and to first byte",
     helps: "Error-rate and latency regressions, Rust vs Python",
   },

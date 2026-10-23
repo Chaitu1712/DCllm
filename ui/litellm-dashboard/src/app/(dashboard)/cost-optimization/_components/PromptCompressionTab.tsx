@@ -106,8 +106,9 @@ const PromptCompressionTab: React.FC<PromptCompressionTabProps> = ({ accessToken
         </CardHeader>
         <CardContent>
           <p className="mb-4 text-sm text-muted-foreground">
-            Headroom is a native LiteLLM guardrail that compresses your prompts before they reach the model, so you pay
-            for fewer input tokens. The tokens it removes are priced and shown on the Usage tab as compression savings.{" "}
+            Headroom is a native DeepCloud LLM guardrail that compresses your prompts before they reach the model, so
+            you pay for fewer input tokens. The tokens it removes are priced and shown on the Usage tab as compression
+            savings.{" "}
             <a
               href="https://docs.litellm.ai/docs/proxy/headroom"
               target="_blank"
@@ -163,7 +164,7 @@ const PromptCompressionTab: React.FC<PromptCompressionTabProps> = ({ accessToken
                   name="apiBase"
                   label={labelWithHint(
                     "Headroom API base",
-                    "Base URL of your Headroom compression service (LiteLLM calls its /v1/compress endpoint)",
+                    "Base URL of your Headroom compression service (DeepCloud LLM calls its /v1/compress endpoint)",
                   )}
                   description="The URL where your Headroom compression service is hosted"
                 >
@@ -184,7 +185,7 @@ const PromptCompressionTab: React.FC<PromptCompressionTabProps> = ({ accessToken
               <div className="mt-6 mb-4 rounded-lg border border-warning/20 bg-warning/10 p-3">
                 <p className="text-sm text-warning">
                   Applying compression to all requests is available to all users. Enabling it selectively per key or
-                  team is a LiteLLM Enterprise feature. Get a trial key{" "}
+                  team is a DeepCloud LLM Enterprise feature. Get a trial key{" "}
                   <a
                     href="https://www.litellm.ai/#pricing"
                     target="_blank"

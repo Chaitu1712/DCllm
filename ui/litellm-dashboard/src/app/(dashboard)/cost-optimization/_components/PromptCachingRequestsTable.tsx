@@ -81,8 +81,8 @@ export default function PromptCachingRequestsTable({ accessToken, dateValue }: P
         <div>
           <CardTitle>Prompt caching requests</CardTitle>
           <p className="mt-1 text-sm text-muted-foreground">
-            Requests with recorded LiteLLM injection or provider cache reads or writes. A cache hit alone does not
-            establish LiteLLM injection; older logs may not record it.
+            Requests with recorded DeepCloud LLM injection or provider cache reads or writes. A cache hit alone does not
+            establish DeepCloud LLM injection; older logs may not record it.
           </p>
           <p className="mt-1 text-sm text-muted-foreground">
             Net savings are estimated from logged usage and current configured pricing, after cache-write premiums.
@@ -92,7 +92,7 @@ export default function PromptCachingRequestsTable({ accessToken, dateValue }: P
         <Tabs value={filter} onValueChange={changeFilter}>
           <TabsList aria-label="Prompt caching request filters">
             <TabsTrigger value="all">All caching</TabsTrigger>
-            <TabsTrigger value="injected">LiteLLM injected</TabsTrigger>
+            <TabsTrigger value="injected">DeepCloud LLM injected</TabsTrigger>
             <TabsTrigger value="hits">Cache hits</TabsTrigger>
           </TabsList>
         </Tabs>
@@ -124,7 +124,7 @@ export default function PromptCachingRequestsTable({ accessToken, dateValue }: P
                   <TableRow>
                     <TableHead>Request</TableHead>
                     <TableHead>Model</TableHead>
-                    <TableHead>LiteLLM injection</TableHead>
+                    <TableHead>DeepCloud LLM injection</TableHead>
                     <TableHead className="text-right">Cache reads</TableHead>
                     <TableHead className="text-right">Cache writes</TableHead>
                     <TableHead className="text-right">Actual cost</TableHead>

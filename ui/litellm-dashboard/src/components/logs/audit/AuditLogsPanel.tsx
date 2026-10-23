@@ -103,7 +103,7 @@ export default function AuditLogsPanel({
       <div className="flex min-h-0 flex-1 flex-col items-center justify-center overflow-y-auto text-center">
         <h1 style={{ display: "block", marginBottom: "10px" }}>✨ Enterprise Feature.</h1>
         <p style={{ display: "block", marginBottom: "10px" }}>
-          This is a LiteLLM Enterprise feature, and requires a valid key to use.
+          This is a DeepCloud LLM Enterprise feature, and requires a valid key to use.
         </p>
         <p style={{ display: "block", marginBottom: "20px", fontStyle: "italic" }}>
           Here&apos;s a preview of what Audit Logs offer:

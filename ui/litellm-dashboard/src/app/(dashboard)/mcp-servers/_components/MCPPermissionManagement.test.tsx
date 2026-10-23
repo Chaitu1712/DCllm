@@ -31,7 +31,7 @@ describe("MCPPermissionManagement", () => {
   it("should default allow_all_keys switch to unchecked for new servers", async () => {
     renderWithForm();
     await expandPanel();
-    expect(screen.getByRole("switch", { name: "Allow All LiteLLM Keys" })).not.toBeChecked();
+    expect(screen.getByRole("switch", { name: "Allow All DeepCloud LLM Keys" })).not.toBeChecked();
   });
 
   const renderWithInitialValues = (initialValues: Record<string, unknown>, props = {}) =>

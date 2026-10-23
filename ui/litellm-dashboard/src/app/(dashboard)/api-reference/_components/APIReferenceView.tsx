@@ -30,8 +30,8 @@ const APIReferenceView: React.FC<ApiRefProps> = ({ proxySettings }) => {
         </div>
 
         <p className="mt-2 mb-2 text-sm text-muted-foreground">
-          LiteLLM is OpenAI Compatible. This means your API Key works with the OpenAI SDK. Just replace the base_url to
-          point to your litellm proxy. Example Below{" "}
+          DeepCloud LLM is OpenAI Compatible. This means your API Key works with the OpenAI SDK. Just replace the
+          base_url to point to your DeepCloud LLM proxy. Example Below{" "}
         </p>
 
         <Tabs defaultValue="openai">
@@ -52,7 +52,7 @@ const APIReferenceView: React.FC<ApiRefProps> = ({ proxySettings }) => {
               code={`import openai
 client = openai.OpenAI(
     api_key="your_api_key",
-    base_url="${base_url}" # LiteLLM Proxy is OpenAI compatible, Read More: https://docs.litellm.ai/docs/proxy/user_keys
+    base_url="${base_url}" # DeepCloud LLM Proxy is OpenAI compatible, Read More: https://docs.litellm.ai/docs/proxy/user_keys
 )
 
 response = client.chat.completions.create(

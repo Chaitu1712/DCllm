@@ -32,9 +32,9 @@ describe("CommunityEngagementButtons", () => {
   it("should render GitHub link with correct href", () => {
     renderWithProviders(<CommunityEngagementButtons />);
 
-    const githubLink = screen.getByRole("link", { name: /litellm on github/i });
+    const githubLink = screen.getByRole("link", { name: /DeepCloud LLM on github/i });
     expect(githubLink).toBeInTheDocument();
-    expect(githubLink).toHaveAttribute("href", "https://github.com/BerriAI/litellm");
+    expect(githubLink).toHaveAttribute("href", "https://github.com/Chaitu1712/DCllm");
     expect(githubLink).toHaveAttribute("target", "_blank");
     expect(githubLink).toHaveAttribute("rel", "noopener noreferrer");
   });
@@ -45,6 +45,6 @@ describe("CommunityEngagementButtons", () => {
     renderWithProviders(<CommunityEngagementButtons />);
 
     expect(screen.queryByRole("link", { name: /join slack/i })).not.toBeInTheDocument();
-    expect(screen.queryByRole("link", { name: /litellm on github/i })).not.toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: /DeepCloud LLM on github/i })).not.toBeInTheDocument();
   });
 });

@@ -451,7 +451,7 @@ describe("AddGuardrailForm provider search", () => {
 
     await user.clear(provider);
     await user.type(provider, "llm_as_a_judge");
-    expect(await screen.findByText("LiteLLM LLM as a Judge")).toBeInTheDocument();
+    expect(await screen.findByText("DeepCloud LLM LLM as a Judge")).toBeInTheDocument();
   });
 });
 

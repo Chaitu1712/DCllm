@@ -94,7 +94,7 @@ export const IDENTITY_SOURCES: readonly IdentitySource[] = [
   },
   {
     id: "internal_issuer",
-    label: "Token signed by LiteLLM (internal issuer)",
+    label: "Token signed by DeepCloud LLM (internal issuer)",
     fixedValues: { [IDENTITY_SOURCE_KEY]: "internal_issuer" },
     fields: [
       {

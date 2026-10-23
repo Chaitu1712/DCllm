@@ -608,7 +608,7 @@ describe("LogDetailContent", () => {
     expect(screen.queryByText("Cache Key")).not.toBeInTheDocument();
   });
 
-  it("should display LiteLLM Overhead when litellm_overhead_time_ms is in metadata", () => {
+  it("should display DeepCloud LLM Overhead when litellm_overhead_time_ms is in metadata", () => {
     render(
       <LogDetailContent
         logEntry={createLogEntry({
@@ -620,14 +620,14 @@ describe("LogDetailContent", () => {
       />,
     );
 
-    expect(screen.getByText("LiteLLM Overhead")).toBeInTheDocument();
+    expect(screen.getByText("DeepCloud LLM Overhead")).toBeInTheDocument();
     expect(screen.getByText("42.50 ms")).toBeInTheDocument();
   });
 
-  it("should not display LiteLLM Overhead when litellm_overhead_time_ms is absent from metadata", () => {
+  it("should not display DeepCloud LLM Overhead when litellm_overhead_time_ms is absent from metadata", () => {
     render(<LogDetailContent logEntry={createLogEntry({ metadata: { status: "success" } })} />);
 
-    expect(screen.queryByText("LiteLLM Overhead")).not.toBeInTheDocument();
+    expect(screen.queryByText("DeepCloud LLM Overhead")).not.toBeInTheDocument();
   });
 
   const retriesItem = () => screen.getByText("Retries").parentElement as HTMLElement;

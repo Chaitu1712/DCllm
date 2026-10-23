@@ -6,10 +6,10 @@ const NOW = new Date("2026-10-14T12:00:00Z");
 
 describe("deploymentWarningContent", () => {
   it.each([
-    { expiry: "2026-10-14", title: "Your LiteLLM Enterprise license expires today (Oct 14, 2026)" },
-    { expiry: "2026-10-15", title: "Your LiteLLM Enterprise license expires in 1 day (Oct 15, 2026)" },
-    { expiry: "2026-11-13", title: "Your LiteLLM Enterprise license expires in 30 days (Nov 13, 2026)" },
-    { expiry: "2026-10-13", title: "Your LiteLLM Enterprise license expired on Oct 13, 2026" },
+    { expiry: "2026-10-14", title: "Your DeepCloud LLM Enterprise license expires today (Oct 14, 2026)" },
+    { expiry: "2026-10-15", title: "Your DeepCloud LLM Enterprise license expires in 1 day (Oct 15, 2026)" },
+    { expiry: "2026-11-13", title: "Your DeepCloud LLM Enterprise license expires in 30 days (Nov 13, 2026)" },
+    { expiry: "2026-10-13", title: "Your DeepCloud LLM Enterprise license expired on Oct 13, 2026" },
   ])("should title a license expiring on $expiry by its distance from today", ({ expiry, title }) => {
     expect(deploymentWarningContent(`license_expiry:${expiry}`, NOW).title).toBe(title);
   });
@@ -27,7 +27,7 @@ describe("deploymentWarningContent", () => {
   });
 
   it.each(["env_credential_login", "no_redis", "detailed_debug", "license_expiry:2026-10-20"])(
-    "should link %s to the LiteLLM docs",
+    "should link %s to the DeepCloud LLM docs",
     (warningId) => {
       expect(deploymentWarningContent(warningId, NOW).docsUrl).toMatch(/^https:\/\/docs\.litellm\.ai\/docs\//);
     },

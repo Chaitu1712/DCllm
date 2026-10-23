@@ -428,9 +428,9 @@ describe("ModelHubTable", () => {
 
       const garden = await screen.findByTestId("decision-model-garden");
       expect(garden).toHaveTextContent("2 decision models across 2 providers answer on /v1/decisions");
-      expect(garden).toHaveTextContent("1 more needs a newer LiteLLM version.");
+      expect(garden).toHaveTextContent("1 more needs a newer DeepCloud LLM version.");
       const newCard = within(garden).getByTestId("decision-model-card-newvendor/decider");
-      expect(within(newCard).getByRole("link", { name: "Needs a newer LiteLLM" })).toHaveAttribute(
+      expect(within(newCard).getByRole("link", { name: "Needs a newer DeepCloud LLM" })).toHaveAttribute(
         "href",
         "https://docs.litellm.ai/docs/decisions#supported-providers",
       );
@@ -490,7 +490,7 @@ describe("ModelHubTable", () => {
 
       const garden = await screen.findByTestId("decision-model-garden");
       expect(garden).toHaveTextContent("3 decision models across 3 providers answer on /v1/decisions");
-      expect(garden).not.toHaveTextContent("a newer LiteLLM version");
+      expect(garden).not.toHaveTextContent("a newer DeepCloud LLM version");
     });
 
     it("offers a decisions mode option that keeps the garden, hides the chat rows, and points at the garden", async () => {

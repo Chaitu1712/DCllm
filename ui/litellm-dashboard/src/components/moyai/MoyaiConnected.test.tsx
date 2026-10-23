@@ -12,8 +12,8 @@ describe("MoyaiConnected", () => {
     expect(screen.getByText("https://moyai.example.com")).toBeInTheDocument();
     expect(screen.getByText("Virtual key issued")).toBeInTheDocument();
     expect(screen.getByText("moyai-moyai.example.com")).toBeInTheDocument();
-    expect(screen.getByText(/models available through LiteLLM/)).toHaveTextContent(
-      "42 models available through LiteLLM",
+    expect(screen.getByText(/models available through DeepCloud LLM/)).toHaveTextContent(
+      "42 models available through DeepCloud LLM",
     );
     expect(screen.getByRole("link", { name: /Open Moyai/ })).toHaveAttribute("href", "https://moyai.example.com");
     expect(screen.getByRole("link", { name: /Back to AI Gateway/ })).toHaveAttribute("href", "/ui/");
@@ -22,7 +22,7 @@ describe("MoyaiConnected", () => {
   it("hides the models row when the count is missing", () => {
     render(<MoyaiConnected moyaiUrl="https://moyai.example.com" keyAlias={null} models={null} />);
 
-    expect(screen.queryByText(/models available through LiteLLM/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/models available through DeepCloud LLM/)).not.toBeInTheDocument();
     expect(screen.queryByText("Virtual key issued")).not.toBeInTheDocument();
   });
 });

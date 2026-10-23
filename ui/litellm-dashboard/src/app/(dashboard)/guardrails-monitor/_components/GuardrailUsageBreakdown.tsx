@@ -116,7 +116,7 @@ const keyColumns = groupColumns("Key", "No key");
 const CostMath = ({ counters, detail }: { counters: CounterRow[]; detail: GuardrailUsageDetail }) => (
   <CalcPopover title="How this cost is calculated" formula="priced units × price per unit = cost, per counter">
     <MathTable rows={counters.map(counterMathRow)} total={formatCost(detail.cost)} />
-    <p className="text-xs text-muted-foreground">Per-unit prices come from the cost map LiteLLM ships with.</p>
+    <p className="text-xs text-muted-foreground">Per-unit prices come from the cost map DeepCloud LLM ships with.</p>
     <UnpricedNote unpriced={detail.untracked_usage_units} provider={detail.provider} />
   </CalcPopover>
 );
@@ -143,7 +143,7 @@ export function GuardrailUsageBreakdown({ detail }: { detail: GuardrailUsageDeta
       <div>
         <h5 className="mb-0 text-base font-semibold text-foreground">Usage &amp; Cost</h5>
         <p className="mt-0.5 text-xs text-muted-foreground">
-          Billable units the provider reported for this guardrail and what LiteLLM priced them at
+          Billable units the provider reported for this guardrail and what DeepCloud LLM priced them at
         </p>
       </div>
 

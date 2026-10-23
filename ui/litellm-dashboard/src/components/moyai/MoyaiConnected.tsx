@@ -18,7 +18,7 @@ export default function MoyaiConnected({
   const rows = [
     { label: "Workspace linked", value: moyaiUrl },
     { label: "Virtual key issued", value: keyAlias },
-    { label: "models available through LiteLLM", value: models != null ? `${models}` : null, prefix: true },
+    { label: "models available through DeepCloud LLM", value: models != null ? `${models}` : null, prefix: true },
   ];
 
   return (
@@ -33,7 +33,7 @@ export default function MoyaiConnected({
         <img src={moyaiHead.src} alt="" className={`${styles.mark} mb-4 h-14 w-auto`} />
         <h1 className="m-0 text-[clamp(28px,3.5vw,44px)] font-medium tracking-[-0.03em] text-white">Moyai connected</h1>
         <p className="mb-0 mt-3 max-w-md text-[16px] text-[#c2c6d0]">
-          This deployment is now linked to your LiteLLM gateway.
+          This deployment is now linked to your DeepCloud LLM gateway.
         </p>
 
         <div className="mt-8 w-full max-w-md space-y-2 text-left">

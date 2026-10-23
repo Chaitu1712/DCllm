@@ -27,8 +27,8 @@ export function TelemetryEnterpriseDialog({
           </DialogTitle>
           <DialogDescription>
             {premiumUser
-              ? "Telemetry can't be turned on from this page. Reach out to your LiteLLM enterprise representative to turn it on for this proxy."
-              : "Telemetry is only available on LiteLLM Enterprise, and this proxy isn't on an enterprise license."}
+              ? "Telemetry can't be turned on from this page. Reach out to your DeepCloud LLM enterprise representative to turn it on for this proxy."
+              : "Telemetry is only available on DeepCloud LLM Enterprise, and this proxy isn't on an enterprise license."}
           </DialogDescription>
         </DialogHeader>
         <DialogFooter showCloseButton />

@@ -37,7 +37,7 @@ type SortKey = "failRate" | "requestsEvaluated" | "avgLatency" | "cost";
 const providerColors: Record<string, string> = {
   Bedrock: "bg-warning/15 text-warning border-warning/20",
   "Google Cloud": "bg-info/15 text-info border-info/20",
-  LiteLLM:
+  "DeepCloud LLM":
     "bg-indigo-100 text-indigo-700 border-indigo-200 dark:bg-indigo-950 dark:text-indigo-300 dark:border-indigo-800",
   Custom: "bg-muted text-muted-foreground border-border",
 };

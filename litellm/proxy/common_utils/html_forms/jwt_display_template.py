@@ -6,7 +6,7 @@ jwt_display_template: Final = """
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>LiteLLM SSO Debug - JWT Information</title>
+    <title>DeepCloud LLM SSO Debug - JWT Information</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
@@ -199,7 +199,7 @@ jwt_display_template: Final = """
     <div class="container">
         <div class="logo-container">
             <div class="logo">
-                🚅 LiteLLM
+                DeepCloud LLM
             </div>
         </div>
         <h2>SSO Debug Information</h2>

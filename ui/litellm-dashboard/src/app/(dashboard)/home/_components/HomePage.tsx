@@ -69,7 +69,7 @@ export default function HomePage() {
               <div>
                 <h2 id="home-whats-new" className="flex items-center gap-2 text-lg font-semibold">
                   <Sparkles className="size-4 text-muted-foreground" />
-                  What&apos;s new in LiteLLM?
+                  What&apos;s new in DeepCloud LLM?
                 </h2>
               </div>
               <div className="grid gap-4 sm:grid-cols-3">

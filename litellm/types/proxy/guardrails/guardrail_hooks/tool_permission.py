@@ -109,4 +109,4 @@ class ToolPermissionGuardrailConfigModel(GuardrailConfigModel):
 
     @staticmethod
     def ui_friendly_name() -> str:
-        return "LiteLLM Tool Permission Guardrail"
+        return "DeepCloud LLM Tool Permission Guardrail"

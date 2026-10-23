@@ -77,7 +77,7 @@ function modelTableEmptyState(
   if (showsDecisionGarden && selectedMode === DECISIONS_MODE && !models.some((model) => isDecisionMode(model.mode))) {
     return {
       title: "No model on this proxy uses the decisions mode",
-      body: "The decision models LiteLLM supports are listed below.",
+      body: "The decision models DeepCloud LLM supports are listed below.",
     };
   }
   return models.length > 0

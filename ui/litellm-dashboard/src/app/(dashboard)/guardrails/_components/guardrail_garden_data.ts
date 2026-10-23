@@ -19,7 +19,7 @@ export interface GuardrailCardInfo {
   providerKey?: string;
 }
 
-const litellmContentFilterLogo = guardrailLogoMap["LiteLLM Content Filter"];
+const litellmContentFilterLogo = guardrailLogoMap["DeepCloud LLM Content Filter"];
 
 export const LITELLM_CONTENT_FILTER_CARDS: GuardrailCardInfo[] = [
   {
@@ -561,7 +561,7 @@ export const PARTNER_GUARDRAIL_CARDS: GuardrailCardInfo[] = [
     id: "wingback",
     name: "Wingback",
     description:
-      "Wingback runtime security for LiteLLM — PII detection, prompt injection, toxic content, and policy enforcement via the Wingback connectors service.",
+      "Wingback runtime security for DeepCloud LLM — PII detection, prompt injection, toxic content, and policy enforcement via the Wingback connectors service.",
     category: "partner",
     logo: guardrailLogoMap["Wingback"],
     tags: ["Security", "PII", "Prompt Injection", "Runtime"],
