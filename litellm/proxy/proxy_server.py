@@ -282,7 +282,7 @@ def generate_feedback_box():
     print("\033[1;37m" + "#" + " " * box_width + "#\033[0m")  # noqa: T201
     print("\033[1;37m" + "#" + "-" * box_width + "#\033[0m")  # noqa: T201
     print()  # noqa: T201
-    print(" Thank you for using LiteLLM! - Krrish & Ishaan")  # noqa: T201
+    print(" Thank you for using dcllm!")  # noqa: T201
     print()  # noqa: T201
     print()  # noqa: T201
     print()  # noqa: T201
@@ -1162,26 +1162,22 @@ else:
 ui_link: Final = f"{server_root_path}/ui"
 fallback_login_link: Final = f"{server_root_path}/fallback/login"
 model_hub_link: Final = f"{server_root_path}/ui/model_hub_table"
-ui_message = f"👉 [```LiteLLM Admin Panel on /ui```]({ui_link}). Create, Edit Keys with SSO. Having issues? Try [```Fallback Login```]({fallback_login_link})"
-ui_message += "\n\n💸 [```LiteLLM Model Cost Map```](https://models.litellm.ai/)."
-
-ui_message += f"\n\n🔎 [```LiteLLM Model Hub```]({model_hub_link}). See available models on the proxy. [**Docs**](https://docs.litellm.ai/docs/proxy/ai_hub)"
-
-custom_swagger_message: Final = (
-    "[**Customize Swagger Docs**](https://docs.litellm.ai/docs/proxy/enterprise#swagger-docs---custom-routes--branding)"
+ui_message: Final = (
+    f"[dcllm Admin Panel]({ui_link}). Create and edit keys with SSO. "
+    f"Having issues? Try [Fallback Login]({fallback_login_link})."
+    f"\n\n[dcllm Model Hub]({model_hub_link}). See available models on the proxy."
 )
 
-### CUSTOM BRANDING [ENTERPRISE FEATURE] ###
-title: Final = os.getenv("DOCS_TITLE", "LiteLLM API") if premium_user else "LiteLLM API"
+title: Final = os.getenv("DOCS_TITLE", "dcllm API") if premium_user else "dcllm API"
 
 _title: Final = title
 _description: Final = (
     os.getenv(
         "DOCS_DESCRIPTION",
-        f"Enterprise Edition \n\nProxy Server to call 100+ LLMs in the OpenAI format. {custom_swagger_message}\n\n{ui_message}",
+        f"dcllm Proxy Server for calling 100+ LLMs through an OpenAI-compatible API.\n\n{ui_message}",
     )
     if premium_user
-    else f"Proxy Server to call 100+ LLMs in the OpenAI format. {custom_swagger_message}\n\n{ui_message}"
+    else f"dcllm Proxy Server for calling 100+ LLMs through an OpenAI-compatible API.\n\n{ui_message}"
 )
 
 
@@ -1281,7 +1277,7 @@ async def _flush_request_accumulators(prisma: PrismaClient) -> None:
 
 async def proxy_shutdown_event(worker_heartbeat: ProxyWorkerHeartbeat | None = None) -> None:
     global prisma_client, master_key, user_custom_auth, user_custom_key_generate, user_custom_key_update
-    verbose_proxy_logger.info("Shutting down LiteLLM Proxy Server")
+    verbose_proxy_logger.info("Shutting down dcllm Proxy Server")
     if worker_heartbeat is not None and prisma_client:
         await worker_heartbeat.deregister()
     if prisma_client:
@@ -6378,7 +6374,7 @@ class ProxyConfig:
         search_tools_parsed: Final[list[SearchToolTypedDict]] = []
 
         print(  # noqa: T201
-            "\033[32mLiteLLM: Proxy initialized with Search Tools:\033[0m"
+            "\033[32mdcllm: Proxy initialized with Search Tools:\033[0m"
         )
 
         for search_tool in search_tools_raw:
@@ -6635,7 +6631,7 @@ class ProxyConfig:
                         )
                     )
                     if litellm.cache is not None:
-                        verbose_proxy_logger.debug("%sSet Cache on LiteLLM Proxy%s", blue_color_code, reset_color_code)
+                        verbose_proxy_logger.debug("%sSet Cache on dcllm Proxy%s", blue_color_code, reset_color_code)
                 elif key == "cache" and value is False:
                     pass
                 elif key == "guardrails":
@@ -6655,7 +6651,7 @@ class ProxyConfig:
 
                     set_global_prompt_directory(value)
                     verbose_proxy_logger.info(
-                        "%sSet Global Prompt Directory on LiteLLM Proxy%s", blue_color_code, reset_color_code
+                        "%sSet Global Prompt Directory on dcllm Proxy%s", blue_color_code, reset_color_code
                     )
                 elif key == "global_bitbucket_config":
                     from litellm.integrations.bitbucket import (
@@ -6664,14 +6660,14 @@ class ProxyConfig:
 
                     set_global_bitbucket_config(value)
                     verbose_proxy_logger.info(
-                        "%sSet Global BitBucket Config on LiteLLM Proxy%s", blue_color_code, reset_color_code
+                        "%sSet Global BitBucket Config on dcllm Proxy%s", blue_color_code, reset_color_code
                     )
                 elif key == "global_gitlab_config":
                     from litellm.integrations.gitlab import set_global_gitlab_config
 
                     set_global_gitlab_config(value)
                     verbose_proxy_logger.info(
-                        "%sSet Global Gitlab Config on LiteLLM Proxy%s", blue_color_code, reset_color_code
+                        "%sSet Global Gitlab Config on dcllm Proxy%s", blue_color_code, reset_color_code
                     )
                 elif key == "priority_reservation_settings":
                     from litellm.types.utils import PriorityReservationSettings
@@ -7198,7 +7194,7 @@ class ProxyConfig:
             router_params["model_list"] = model_list
             validate_auto_router_capability_limits(model_list, limit=_license_check.auto_router_capability_limit())
             print(  # noqa: T201
-                "\033[32mLiteLLM: Proxy initialized with Config, Set models:\033[0m"
+                "\033[32mdcllm: Proxy initialized with Config, Set models:\033[0m"
             )
             for model in model_list:
                 ### LOAD FROM os.environ/ ###
